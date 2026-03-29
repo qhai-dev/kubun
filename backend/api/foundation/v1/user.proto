@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package api.foundation.v1;
+
+option go_package = "github.com/qhai-dev/ozma/api/foundation/v1";
+
+message User {
+  string id = 1;
+}
+
+message CreateUserRequest {
+  string phone = 1;
+  string name = 2;
+}
+
+message CreateUserResponse {
+  int64 id = 1;
+}
+
+service UserService {
+  rpc CreateUser (CreateUserRequest) returns (CreateUserResponse);
+}
