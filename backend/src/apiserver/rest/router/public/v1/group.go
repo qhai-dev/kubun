@@ -1,0 +1,16 @@
+package v1
+
+import (
+	"github.com/gin-gonic/gin"
+)
+
+func NewRouterGroup(router *gin.RouterGroup) {
+	r := router.Group("/v1")
+	{
+		r.GET("/test", func(c *gin.Context) {
+			c.JSON(200, gin.H{
+				"message": "test",
+			})
+		})
+	}
+}

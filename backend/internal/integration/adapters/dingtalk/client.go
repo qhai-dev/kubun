@@ -1,5 +1,0 @@
-package dingtalk
-
-func NewClient() {
-
-}
